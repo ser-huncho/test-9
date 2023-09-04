@@ -30,7 +30,7 @@ End-users can predict the applicants' repayment abilities based on these variabl
 - **Organization type where the applicant works:** Transport, Medicine, Construction, Housing, Services, Bank, Insurance, School, Telecom, and many more
 - **Number of credit bureau requests:** Number of enquiries to credit bureau about the applicant one year before application (excluding last 3 months before application)
 - **Days of employed:** How many days before the application did the applicant start his current employment
-- **Days of registration** How many days before the application did the applicant change his registration
+- **Days of registration:** How many days before the application did the applicant change his registration
 - **Days of ID publish:** How many days before the application did the applicant change the identity document with which he applied for the loan
 - **Days of last phone change:** How many days before the application did the applicant change his phone
 - **Years of begin expluatation mode:** Normalized information about the building where the applicant lives
