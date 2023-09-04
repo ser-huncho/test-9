@@ -28,7 +28,7 @@ End-users can predict the applicants' repayment abilities based on these variabl
 - **Day of applying for the loan:** Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday
 - **Hour of applying for the loan:** 1 up to 24
 - **Organization type where the applicant works:** Transport, Medicine, Construction, Housing, Services, Bank, Insurance, School, Telecom, and many more
-- **Number of enquiries to credit bureau**
+- **Number of credit bureau requests:** Number of enquiries to credit bureau about the applicant one year before application (excluding last 3 months before application)
 - **Days of employed:** How many days before the application did the applicant start his current employment
 - **Days of registration** How many days before the application did the applicant change his registration
 - **Days of ID publish:** How many days before the application did the applicant change the identity document with which he applied for the loan
