@@ -41,4 +41,4 @@ End-users can predict the applicants' repayment abilities based on these variabl
 Those variables were the result of the Random Forest features importance using 'SelectFromModel' method.
 
 ## Conclusions
-Random Forest Classifier resulted in a better performance with the **F1-score of 66.48%**.
+The F1-score of the Logistic Regression was **65.88%** and the Random Forest Classifier was **66.48%**.
