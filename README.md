@@ -4,6 +4,7 @@
 As a lending company, it is important to know the applicants' repayment abilities so that the company can decide whether to provide a loan to those applicants or not based on their data.
 - Predict how capable each applicant is of repaying a loan based on their data such as applicant's income, credit amount of loan, loan annuity, price of the goods for which the loan is given, applicant's age, type of organization where the applicant works, etc.
 - The dataset was from Project-based Internship of Home Credit Indonesia x Rakamin, but also accessible on Kaggle [here](https://www.kaggle.com/competitions/home-credit-default-risk/data). I only used the 'application_train.csv' data for this project.
+- Deploy a Machine Learning model using Flask so the end-users can input the applicant's data and get the prediction directly. [Here](https://drive.google.com/file/d/1Vo85175sClSMj2LmpNUCUzJ61HQv3T03/view?usp=sharing) is the screen recording of the web app on my local page.
 
 ## Objectives
 * The objective is to make a loan default risk prediction based on several applicant variables. As a result, the model can help the company to know the ability of the applicant so they can decide whether to give a loan or not.
@@ -17,7 +18,7 @@ As a lending company, it is important to know the applicants' repayment abilitie
 
   The methods used were Logistic Regression and Random Forest Classifier using the F1-score of 5-fold cross-validation as an evaluation model. Also only used Random Forest features importance for the final variables.
 
-## Application
+## Web App (Flask)
 End-users can predict the applicants' repayment abilities based on these variables:
 - **Income of the applicant**
 - **Credit amount of the loan**
@@ -38,7 +39,8 @@ End-users can predict the applicants' repayment abilities based on these variabl
 - **External Source 2:** Normalized score from external data source
 - **External Source 3:** Normalized score from external data source
 
-Those variables were the result of the Random Forest features importance using 'SelectFromModel' method.
+Those variables were the result of the Random Forest features importance using 'SelectFromModel' method and the model for deployment used Logistic Regression for the lighter model.
+Code for deployment can be accessed in [this folder](https://github.com/wandalistathea/analisis_sentimen_tokopedia/tree/main/Deployment).
 
 ## Conclusions
 The F1-score of the Logistic Regression was **65.88%** and the Random Forest Classifier was **66.48%**.
