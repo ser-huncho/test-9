@@ -40,7 +40,7 @@ End-users can predict the applicants' repayment abilities based on these variabl
 - **External Source 3:** Normalized score from external data source
 
 Those variables were the result of the Random Forest features importance using 'SelectFromModel' method and the model for deployment used Logistic Regression for the lighter model.
-Code for deployment can be accessed in [this folder](https://github.com/wandalistathea/analisis_sentimen_tokopedia/tree/main/Deployment).
+Code for deployment can be accessed in [this folder](https://github.com/wandalistathea/loan-default-risk-prediction/tree/main/Deployment).
 
 ## Conclusions
 The F1-score of the Logistic Regression was **65.88%** and the Random Forest Classifier was **66.48%**.
