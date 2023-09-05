@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <title>Home Credit Loan Default Risk Prediction</title>
+
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static', filename='style.css') }}">
+
+  </head>
+
+
+  <body>
+    <div class="testbox">
+      <form method="POST" action="{{ url_for('output') }}">
+        <div class="sub-banner">
+          <h1>Home Credit Loan Default Risk Prediction</h1>
+          <h2>Predict how capable the applicant is of repaying a loan</h2>
+        </div>
+
+        <div class="banner"></div>
+        
+        <div class="position-item">
+          <div class="item">
+            <b>Income of the Applicant<span class="required">*</span></b>
+            <input type="text" name="applicant_income" required/>
+          </div>
+
+          <div class="item">
+            <b>Credit Amount of the Loan<span class="required">*</span></b>
+            <input type="text" name="credit_amount" required/>
+          </div>
+
+          <div class="item">
+            <b>Loan Annuity<span class="required">*</span></b>
+            <input type="text" name="loan_annuity" required/>
+          </div>
+        </div>
+        
+        <div class="position-item">
+            <div class="item">
+              <b>Price of the Goods<span class="required">*</span></b>
+              <p>The price of the goods for which the loan is given</p>
+              <input type="text" name="goods_price" required/>
+            </div>
+  
+            <div class="item">
+              <b>Region Population Relative<span class="required">*</span></b>
+              <p>Normalized population of region where the applicant lives</p>
+              <input type="text" name="region_pop" required/>
+            </div>
+  
+            <div class="item">
+              <b>Applicant's Age<span class="required">*</span></b>
+              <p>Applicant's age in days at the time of application</p>
+              <input type="text" name="applicant_age" required/>
+            </div>
+        </div>
+
+        <div class="position-item">
+            <div class="item">
+                <b>Day of Applying for the Loan<span class="required">*</span></b>
+                <select required id="day" name="day">
+
+                  {% for i in range(0, len_days) %}
+                    <option value="{{ days[i] }}">{{ days[i] }}</option>
+                  {% endfor %}
+
+                </select>
+            </div>
+
+            <div class="item">
+                <b>Hour of Applying for the Loan<span class="required">*</span></b>
+                <input type="text" name="hour" min="1" max="24" placeholder="1 up to 24" required/>
+            </div>
+
+            <div class="item">
+                <b>Organization Type Where Applicant Works<span class="required">*</span></b>
+                <select required id="org_type" name="org_type">
+                  
+                  {% for i in range(0, len_orgtype) %}
+                    <option value="{{ orgtype[i] }}">{{ orgtype[i] }}</option>
+                  {% endfor %}
+
+                </select>
+            </div>
+        </div>
+        
+        <div class="position-item">
+            <div class="item">
+              <b>Number of Credit Bureau Requests<span class="required">*</span></b>
+              <p>Number of enquiries to credit bureau about the applicant one year before application (excluding last 3 months before application)</p>
+              <input type="text" name="credit_bureau" required/>
+            </div>
+  
+            <div class="item">
+              <b>Days of Employed<span class="required">*</span></b>
+              <p>How many days before the application did the applicant start his current employment</p>
+              <input type="text" name="days_employed" required/>
+            </div>
+  
+            <div class="item">
+              <b>Days of Registration<span class="required">*</span></b>
+              <p>How many days before the application did the applicant change his registration</p>
+              <input type="text" name="days_reg" required/>
+            </div>
+        </div>
+
+        <div class="position-item">
+            <div class="item">
+              <b>Days of ID Publish<span class="required">*</span></b>
+              <p>How many days before the application did the applicant change the identity document with which he applied for the loan</p>
+              <input type="text" name="days_id" required/>
+            </div>
+  
+            <div class="item">
+              <b>Days of Last Phone Change<span class="required">*</span></b>
+              <p>How many days before the application did the applicant change his phone</p>
+              <input type="text" name="days_phone" required/>
+            </div>
+  
+            <div class="item">
+              <b>Years of Begin Expluatation Mode<span class="required">*</span></b>
+              <p>Normalized information about the building where the applicant lives</p>
+              <input type="text" name="exp_mode" required/>
+            </div>
+        </div>
+
+        <div class="position-item">
+            <div class="item">
+              <b>Total Area Mode<span class="required">*</span></b>
+              <p>Normalized information about the building where the applicant lives</p>
+              <input type="text" name="area_mode" required/>
+            </div>
+  
+            <div class="item">
+              <b>External Source 2<span class="required">*</span></b>
+              <p>Normalized score from external data source</p>
+              <input type="text" name="source_2" required/>
+            </div>
+  
+            <div class="item">
+              <b>External Source 3<span class="required">*</span></b>
+              <p>Normalized score from external data source</p>
+              <input type="text" name="source_3" required/>
+            </div>
+        </div>
+
+        <div class="btn-block">
+          <button type="submit" name="submit">Predict</button>
+        </div>
+
+      </form>
+    </div>
+  </body>
+</html>

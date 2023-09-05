@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <title>Home Credit Loan Default Risk Prediction</title>
+
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static', filename='style.css') }}">
+
+  </head>
+
+
+  <body>
+    <div class="testbox">
+      <form>
+        <div class="sub-banner">
+          <h1>Home Credit Loan Default Risk Prediction</h1>
+          <h2>Predict how capable the applicant is of repaying a loan</h2>
+        </div>
+
+        <div class="banner"></div>
+
+
+        <div class="position-item">
+          <div class="item">
+          </div>
+
+          <div class="item">
+            <h4>Information of the Applicant:</h4>
+            <ul>
+              <li><b>Income of the Applicant:</b> {{applicant_income}}</li>
+              <li><b>Credit Amount of the Loan:</b> {{credit_amount}}</li>
+              <li><b>Loan Annuity:</b> {{loan_annuity}}</li>
+              <li><b>Price of the Goods:</b> {{goods_price}}</li>
+              <li><b>Region Population Relative:</b> {{region_pop}}</li>
+              <li><b>Applicant's Age:</b> {{applicant_age}}</li>
+              <li><b>Day of Applying for the Loan:</b> {{day}}</li>
+              <li><b>Hour of Applying for the Loan:</b> {{hour}}</li>
+              <li><b>Organization Type Where Applicant Works:</b> {{org_type}}</li>
+              <li><b>Number of Credit Bureau Requests:</b> {{credit_bureau}}</li>
+              <li><b>Days of Employed:</b> {{days_employed}}</li>
+              <li><b>Days of Registration:</b> {{days_reg}}</li>
+              <li><b>Days of ID Publish:</b> {{days_id}}</li>
+              <li><b>Days of Last Phone Change:</b> {{days_phone}}</li>
+              <li><b>Years of Begin Expluatation Mode:</b> {{exp_mode}}</li>
+              <li><b>Total Area Mode:</b> {{area_mode}}</li>
+              <li><b>External Source 2:</b> {{source_2}}</li>
+              <li><b>External Source 3:</b> {{source_3}}</li>
+            </ul>
+          </div>
+
+          <div class="item">
+          </div>
+        </div>
+
+
+        <div class="output-container">
+          
+          <h2>{{ msg1 }}</h2>
+
+          {% if msg2 == "Loan Rejected" %}
+            <h2 style="color:red;">{{ msg2 }}</h2>
+          {% elif msg2 == "Loan Accepted" %}
+            <h2 style="color:green;">{{ msg2 }}</h2>
+          {% endif %}
+
+          <br>
+
+          <a href="/">Back to Home Page</a>
+
+        </div>
+        
+
+      </form>
+    </div>
+  </body>
+</html>
